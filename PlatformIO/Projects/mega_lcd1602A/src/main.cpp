@@ -4,17 +4,17 @@
 
  
 
-int RS = 12;                              //
+int RS = 6;                              //
 
-int E = 11;                               //
+int E = 7;                               //
 
-int D4 = 5;                               //
+int D4 = 11;                               //
 
-int D5 = 4;                               //
+int D5 = 10;                               //
 
-int D6 = 3;                               //Variablen für die Arduino Pins
+int D6 = 9;                               //Variablen für die Arduino Pins
 
-int D7 = 2;                               //
+int D7 = 8;                               //
 
 int Spalte = 16;                          //
 

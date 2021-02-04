@@ -1,5 +1,9 @@
 #include <Arduino.h>
+#include <LiquidCrystal.h>                // Die Bibliothek für deinen Display
+#include <Wire.h>
 #include "DHT.h"
+
+//dht
 #define DHTPIN 2          // Hier die Pin Nummer eintragen wo der Sensor angeschlossen ist
 #define DHTTYPE DHT11     // Hier wird definiert was für ein Sensor ausgelesen wird. In 
                           // unserem Beispiel möchten wir einen DHT11 auslesen, falls du 
@@ -7,6 +11,8 @@
 
 /**( Definieren der Objekte )**/
 DHT dht(DHTPIN, DHTTYPE);
+
+//ultraschall
 int trigger=22;                               // Der Trigger Pin
 
 int echo=24;                                  // Der Echo Pin
@@ -21,17 +27,44 @@ long entfernung=0;                           // Hier wird die Entfernung vom
 
                                              // Hindernis abgespeichert
 
+//lcd1602A
+int RS = 6;                              //
+
+int E = 7;                               //
+
+int D4 = 11;                               //
+
+int D5 = 10;                               //
+
+int D6 = 9;                               //Variablen für die Arduino Pins
+
+int D7 = 8;                               //
+
+int Spalte = 16;                          //
+
+int Zeile = 2;                            //
+
+LiquidCrystal lcd(RS, E, D4, D5, D6, D7); // Hier wird das Objekt lcd vom Typ 
+
+
 void setup() {
+  //dht
   Serial.begin(9600);
   Serial.println("DHT11 Testprogramm");
   dht.begin();
 
+  //ultraschall
   // Serial.begin(9600);                      // Die serielle Kommunikation starten
 
     pinMode(trigger, OUTPUT);                // Trigger Pin als Ausgang definieren
 
     pinMode(echo, INPUT);                    // Echo Pin als Eingang defnieren
+
+  //lcd
+  lcd.begin(Spalte,Zeile);               // Leg die LCD mit 16 Spalten und 2 Zeilen fest
+
 }
+
 void loop() {
   // Wait a few seconds between measurements.
   delay(5000);                     // Hier definieren wir die Verweilzeit die gewartet wird
@@ -86,6 +119,15 @@ void loop() {
         Serial.print(entfernung);            // Den Weg in Zentimeter ausgeben
 
         Serial.println(" cm");               //
+
+    
+    lcd.setCursor(0,0);                      // Springe in die erste Zeile
+
+    lcd.print(" hello ");                    // Der Text für die erste Zeile
+
+    lcd.setCursor(0,1);                      // Springe in die nächste Zeile
+
+    lcd.print("  world ");                   // Schreibe den Text in die zweite Zeile
 
  
 
