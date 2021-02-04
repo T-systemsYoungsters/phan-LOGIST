@@ -2,6 +2,7 @@
 #include <LiquidCrystal.h>                // Die Bibliothek für deinen Display
 #include <Wire.h>
 #include "DHT.h"
+//Trong Tue Phan
 
 //dht
 #define DHTPIN 2          // Hier die Pin Nummer eintragen wo der Sensor angeschlossen ist
@@ -129,7 +130,7 @@ void loop() {
     lcd.setCursor(0,1);                      // Springe in die nächste Zeile
 
     lcd.print(t);                   // Schreibe den Text in die zweite Zeile
-    lcd.print("C  ");
+    lcd.print("C   ");
     lcd.print(h);
     
 
