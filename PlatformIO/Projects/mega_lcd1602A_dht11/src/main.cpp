@@ -13,9 +13,9 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 //ultraschall
-int trigger=22;                               // Der Trigger Pin
+int trigger=3;                               // Der Trigger Pin
 
-int echo=24;                                  // Der Echo Pin
+int echo=4;                                  // Der Echo Pin
 
 long dauer=0;                                // Hier wird die Zeitdauer abgespeichert
 
@@ -123,13 +123,15 @@ void loop() {
     
     lcd.setCursor(0,0);                      // Springe in die erste Zeile
 
-    lcd.print(" hello ");                    // Der Text für die erste Zeile
+    lcd.print(entfernung);                    // Der Text für die erste Zeile
+    lcd.print("cm");
 
     lcd.setCursor(0,1);                      // Springe in die nächste Zeile
 
-    lcd.print("  world ");                   // Schreibe den Text in die zweite Zeile
-
- 
+    lcd.print(t);                   // Schreibe den Text in die zweite Zeile
+    lcd.print("C  ");
+    lcd.print(h);
+    
 
     delay(1000);                             // Nach einer Sekunde wiederholen
 }
