@@ -3,7 +3,7 @@
 Link http://programarcadegames.com/worksheets/show_file.php?file=worksheet_01.php&lang=de  <br>
 
 1. print ("Trong Tue Phan") <br>
-2. # for single Line and start ''' and end ''' for a section <br>
+2. #for single Line and start ''' and end ''' for a section <br>
 3. print(2/3) => 0.666666 print(2//3) => 0  <br>
   // is a floor division operator round down the answer to an interger <br>
 4. pi = 3.14 <br>
