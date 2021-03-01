@@ -11,7 +11,7 @@ int D7 = 8; //
 int Spalte = 16; //
 int Zeile = 2; //
 LiquidCrystal lcd(RS, E, D4, D5, D6, D7); // Hier wird das Objekt lcd vom Typ
-// LiquidCrystal erzeugt
+// LiquidCrystal erzeugt#
 void setup()
 {
    lcd.begin(Spalte, Zeile); // Leg die LCD mit 16 Spalten und 2 Zeilen fest
