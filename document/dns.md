@@ -1,10 +1,10 @@
-#DNS - Domain Network System
+# DNS - Domain Network System
 
 verknüpft sprechende URLs mit kryptischen IP-Adressen
 vergleichsweise risikolose Änderung des IP-Adressen
 DNS-Namen mehreren IP-Adressen zuorden (Load Balancing)
 
-##AD-Blocker
+## AD-Blocker
 Raspberry Pi als universeller Adblocker
 Durch Installation von PiHole und dem Einrichten eines DNS-Servers auf dem Raspi werden alle Werbe-Domains in Leere umgeleitet
 Dabei dient der PiHole als zwischen Server von dir und der tatsächlichen Seite
