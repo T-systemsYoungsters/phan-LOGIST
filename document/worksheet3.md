@@ -23,7 +23,7 @@ if number >= -10 and number <= 10:
 5. 	</br>
 ```python
 x = input() #oder x = 4
-if x != 0:
+if x >= 0:
   print("x is positive.")
 else:
   print("x is not positive.")
