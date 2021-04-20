@@ -1,4 +1,4 @@
-# Lab 6
+# Lab 6 
 
 http://programarcadegames.com/index.php?chapter=lab_loopy_lab&lang=de
 
@@ -132,3 +132,4 @@ while not done:
 # Close the window and quit.
 pygame.quit()
 ```
+???
