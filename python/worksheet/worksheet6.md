@@ -5,15 +5,20 @@ http://programarcadegames.com/worksheets/show_file.php?file=worksheet_06.php&lan
 Extra Stuff from Chapter 6 Diamond of Numbers
 ```python
 for row in range(1,9):
-    for space in range(9-row): print("  ", end="")
+    for space in range(9-row): 
+        print("  ", end="")
     for column in range(1,row+1): 
         print(column, end=" ")
-    for i in range(row,1,-1):print(i-1, end=" ")
+    for i in range(row,1,-1):
+        print(i-1, end=" ")
     print()
 for row in range(9): 
-    for space in range(row): print("  ", end="")
-    for column in range(9-row): print(column+1, end=" ")
-    for i in range(8-row,0,-1): print(i, end=" ")
+    for space in range(row): 
+        print("  ", end="")
+    for column in range(9-row): 
+        print(column+1, end=" ")
+    for i in range(8-row,0,-1): 
+        print(i, end=" ")
     print()
 ```
 
@@ -101,7 +106,7 @@ x = 10
  
 while x > 0:
     print(x)
-    x = x - 1
+    x -= 1
  
 print("Blast-off")
 ```
