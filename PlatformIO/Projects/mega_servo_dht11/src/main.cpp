@@ -43,7 +43,7 @@ void loop() {
   Serial.print(t);                  // Ausgeben der Temperatur
   Serial.write("°");                // Schreiben des ° Zeichen
   Serial.println("C");
-  float zeiger = (t-26)*90;
+  float zeiger = 180 - ((t-26)*90*1);
   servoMain.write(90); // Turn Servo back to center position (90 degrees)
   delay(3000); // Wait 1 second
   servoMain.write(zeiger); // Turn Servo Right to 180 degrees
