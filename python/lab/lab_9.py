@@ -20,7 +20,11 @@ print(min3(4, 5, 5))
 print(min3(4, 4, 4))
 print(min3(-2, -6, -100))
 print(min3("Z", "B", "A"))
-
+"""
+Write a function called box that will output boxes given a height and width. 
+Once you've finished writing your function, copy and 
+paste the following code after it and make sure it works with the function you wrote:
+"""
 def box(height,width):
     for i in range(height):
         for j in range(width):
@@ -32,7 +36,15 @@ print()   # Blank line
 box(3,2)  # Print a box 3 high, 2 across
 print()   # Blank line
 box(3,10) # Print a box 3 high, 10 across
-
+"""
+Write a function called find that will take a list of numbers, my_list, along with one other number, key. 
+Have it search the list for the value contained in key. 
+Each time your function finds the key value, print the array position of the key. 
+You will need to juggle three variables, one for the list, one for the key, and one for the position of where you are in the list.
+This code will look similar to the Chapter 7 code for iterating though a list using the range and len functions. 
+Start with that code and modify the print to show each element and its position. 
+Then instead of just printing each number, add an if statement to only print the ones we care about.
+"""
 def find(list_x, key):
     for item in range(len(list_x)):
         if key == list_x[item]:
@@ -65,6 +77,18 @@ def count_list(list, key):
 count = count_list([1,2,3,3,3,4,2,1],3)
 print(count)
 
+"""
+Write a function named create_list that takes in a list size and returns a list of random numbers from 1-6. i.e., 
+calling create_list(5) should return 5 random numbers from 1-6. 
+(Remember, Chapter 7 has code showing how to do something similar, creating a list out of five numbers the user enters. 
+Here, you need to create random numbers rather than ask the user.)
+Write a function called count_list that takes in a list and a number. 
+Have the function return the number of times the specified number appears in the list.
+To test, use this code against the function you wrote:
+Write a function called average_list that returns the average of the list passed into it.
+To test, use this code against the function you wrote:
+"""
+
 def average_list(list):
     sum = 0
     for i in range(len(list)):
@@ -73,6 +97,13 @@ def average_list(list):
 
 avg = average_list([1,2,3])
 print(avg)
+
+"""
+Now that the functions have been created, use them all in a main program that will:
+Create a list of 10,000 random numbers from 1 to 6. This should take one line of code. Use the function you created earlier in the lab.)
+Print the count of 1 through 6. (That is, print the number of times 1 appears in the 10,000. And then do the same for 2-6.)
+Print the average of all 10,000 random numbers.
+"""
 
 new_list = create_list(10000)
 for i in range(1,7):
