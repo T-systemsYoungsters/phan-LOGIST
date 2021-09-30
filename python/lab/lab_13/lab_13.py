@@ -93,9 +93,9 @@ class Player(pygame.sprite.Sprite):
 pygame.init()
 
 # Loading in Soundfile through Directory
-collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\good_block.wav")
-b_collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\bad_block.wav")
-w_collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\bump.wav")
+collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\lab_13\\good_block.wav")
+b_collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\lab_13\\bad_block.wav")
+w_collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\lab_13\\bump.wav")
 
 # Set the height and width of the screen
 screen_width = 700
