@@ -75,18 +75,24 @@ class Player(pygame.sprite.Sprite):
         self.rect.x += self.change_x
         self.rect.y += self.change_y
 
-        if self.rect.x == 0:
-            self.rect.x += 3
-        if self.rect.x == 685:
-            self.rect.x = 685
-        if self.rect.y == 0:
-            self.rect.y = 0
-        if self.rect.y == 385:
-            self.rect.y = 385
+        # Border and Border hit Sound
+        if self.rect.x < 0:
+            self.rect.x += 15
+            w_collide_sound.play()
+        if self.rect.x > 685:
+            self.rect.x -= 15
+            w_collide_sound.play()
+        if self.rect.y < 0:
+            self.rect.y += 15
+            w_collide_sound.play()
+        if self.rect.y > 385:
+            self.rect.y -= 15
+            w_collide_sound.play()
 
 # Initialize Pygame
 pygame.init()
 
+# Loading in Soundfile through Directory
 collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\good_block.wav")
 b_collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\bad_block.wav")
 w_collide_sound = pygame.mixer.Sound("c:\\Users\\Phan\\Documents\\phan-LOGIST\\python\\lab\\bump.wav")
@@ -106,26 +112,26 @@ bad_block_list = pygame.sprite.Group()
 all_sprites_list = pygame.sprite.Group()
  
 for i in range(50):
-    # This represents a block
+    # This represents a good block
     block = Block(GREEN, 20, 15)
  
     # Set a random location for the block
     block.rect.x = random.randrange(screen_width)
     block.rect.y = random.randrange(screen_height)
  
-    # Add the block to the list of objects
+    # Add the good block to the list of objects
     good_block_list.add(block)
     all_sprites_list.add(block)
 
 for i in range(50):
-    # This represents a block
+    # This represents a bad block
     block = Block(RED, 20, 15)
  
     # Set a random location for the block
     block.rect.x = random.randrange(screen_width)
     block.rect.y = random.randrange(screen_height)
  
-    # Add the block to the list of objects
+    # Add the bad block to the list of objects
     bad_block_list.add(block)
     all_sprites_list.add(block)
 
@@ -171,10 +177,10 @@ while not done:
     # Clear the screen
     screen.fill(WHITE)
  
-    # See if the player block has collided with anything.
+    # See if the player block has collided with good block.
     blocks_hit_list = pygame.sprite.spritecollide(player, good_block_list, True)
  
-    # Check the list of collisions.
+    # Check the good list of collisions. and play sound
     for block in blocks_hit_list:
         score += 1
         collide_sound.play()
@@ -182,21 +188,13 @@ while not done:
     
     bad_blocks_hit_list = pygame.sprite.spritecollide(player, bad_block_list, True)
  
-    # Check the list of collisions.
+    # Check the bad list of collisions. and play sound
     for block in bad_blocks_hit_list:
         score -= 1
         b_collide_sound.play()
         print(score)
 
-    if player.rect.x == 0:
-        w_collide_sound.play()
-    if player.rect.x > 685:
-        player.rect.x = 685
-    if player.rect.y < 0:
-        player.rect.y = 0
-    if player.rect.y > 385:
-        player.rect.y = 385
-
+    # update all sprites
     all_sprites_list.update()
 
     # Draw all the spites
