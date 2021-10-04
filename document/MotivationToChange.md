@@ -8,3 +8,4 @@ Menschen tendieren eher begehrenden Meinung. (generell eher Positiv statt Negati
 - soziale Anreiz (Meinung Anderer)
 - sofortige Belohnung
 - Fortschrittüberwachung
+
