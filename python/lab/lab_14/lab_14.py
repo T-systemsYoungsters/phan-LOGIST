@@ -1,3 +1,5 @@
+# LOGIST-155 Jira Issue
+
 """
 Use sprites to collect blocks.
  
