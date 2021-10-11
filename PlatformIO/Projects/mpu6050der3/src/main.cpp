@@ -34,4 +34,10 @@ void loop(){
   Serial.print(" | GyY = "); Serial.print(GyY);
   Serial.print(" | GyZ = "); Serial.println(GyZ);
   delay(333);
+
+  // The temperature sensor is -40 to +85 degrees Celsius.
+  // It is a signed integer.
+  // According to the datasheet:
+  //   340 per degrees Celsius, -512 at 35 degrees.
+  // At 0 degrees: -512 - (340 * 35) = -12412
 }
