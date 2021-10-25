@@ -71,3 +71,17 @@ for index, line in enumerate(file2, start=1):
 file2.close()
 end = time.time() - start
 print(end,"seconds")
+
+start = time.time()
+file2 = open("AliceInWonderLand200.txt")
+# if you dont want to use enumerate you can use line_number as the index number 
+line_number = 0
+for index, line in enumerate(file2, start=1):
+    words = split_line(line)
+    line_number += 1
+    for word in words:
+        if word.upper() not in dictionary_list:
+            print(word)
+file2.close()
+end = time.time() - start
+print(end,"seconds")
