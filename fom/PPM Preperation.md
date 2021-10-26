@@ -72,3 +72,7 @@ tries efficiently streamline inventories to avoid gluts and shortages \
 - negotiation of favourable condition is difficult
 
 ### advertising Media
+1. analyzed as what product and to which customers it is to be advertised
+2. complete understanding about customers demographics who are targeted
+3. depending upon type of product, type of customers, advertisement budget set, companies can choose various types of advertising media. Choosing in mind with given maximum return in investment. Companies should spend minimum on advertising, reach out to as many people as they can and which should convert into substantial sales
+4. over period of time, this processing of selection the appropriate ad media can be repeated to increasing cost of benefits
