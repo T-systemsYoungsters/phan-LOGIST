@@ -1,10 +1,10 @@
 def f(n):
-    if n==1:
-        return 1
-    elif n==2:
-        return 2
-    elif n>2:
-        return f(n-1)+f(n-2)
-
-for x in range(1,11):
-    print(f(x))
+    fn1 = 0
+    fn2 = 1
+    for x in range(1,n):
+        n = fn1 + fn2
+        fn1 = fn2
+        fn2 = n
+    return n
+for x in range(1,36):
+    print("{:2} - {:9,}".format(x, f(x)))
