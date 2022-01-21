@@ -63,7 +63,7 @@ while True:
     cv2.imshow('Screen Shot', scr)
     cv2.waitKey(1)
     pyautogui.click(x=x, y=y)
-    sleep(.01)
+    sleep(.1)
     if keyboard.is_pressed('q'):
         break
 
