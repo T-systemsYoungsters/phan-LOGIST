@@ -5,7 +5,8 @@ http://programarcadegames.com/worksheets/show_file.php?file=worksheet_04.php&lan
 1.
 ```python
 for i in range(10): 
-	print("Done")
+	print("Phan")
+print("Done")
 ```
 2.
 ```python
