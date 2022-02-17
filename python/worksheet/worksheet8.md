@@ -1,5 +1,7 @@
 # Chapter 8
 
+test commit showcase
+
 http://programarcadegames.com/worksheets/show_file.php?file=worksheet_08.php&lang=de
 
 1. Why does using this code in the main loop not work to move the rectangle?

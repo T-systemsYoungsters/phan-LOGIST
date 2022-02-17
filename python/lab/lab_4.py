@@ -1,4 +1,4 @@
-#wrong commit
+#test commit 
 import random
 done = False
 miles = 0
@@ -57,7 +57,7 @@ while done == False:
 
     if thirst > 6:
         print("You died of thirst!")
-        done = True
+        done = True; 
     elif thirst > 4:
         print("You are thirsty.")
     if tiredness > 8:
