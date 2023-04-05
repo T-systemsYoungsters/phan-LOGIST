@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "yahoo.co.jp",
+        "resourceTypes": ["main_frame"]
+      }
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "action": {
+        "type": "allow"
+      },
+      "condition": {
+        "resourceTypes": ["main_frame", "xmlhttprequest"]
+      }
+    }
+  ]
